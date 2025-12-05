@@ -4,7 +4,7 @@
 
 <div align="center">
 <picture>
-  <img alt="" src="https://simonsfoundation.imgix.net/wp-content/uploads/2017/08/22170752/ring.png" width="100%">
+  <img alt="" src="sample.png" width="100%">
 </picture>
 </div>
 
