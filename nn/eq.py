@@ -2,6 +2,8 @@
 
 import numpy as np
 
+def gaussian(x, sigma): return np.exp(-0.5 * (x / sigma)**2)
+
 def relu(x): return np.maximum(0, x)
 
 def ring_neuron(t, z, z0, wij, q, gammaE, tauE, X, dW):
