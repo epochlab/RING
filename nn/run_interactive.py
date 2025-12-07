@@ -45,8 +45,8 @@ count = 0
 
 # PLOT
 plot = figure(width=1240, height=640, x_range=(0, N-1), y_range=(-0.05, 1.5))
-plot.line('x', 'y', source=src_z, legend_label="Activity (z)")
-plot.scatter('x', 'y', source=src_z, marker="circle", size=6, fill_color="white", line_width=0.5)
+plot.line('x', 'y', source=src_z, line_color='black', legend_label="Activity (z)")
+plot.scatter('x', 'y', source=src_z, marker="circle", size=6, line_color='black', fill_color="white", line_width=0.5)
 plot.line('x', 'y', source=src_X, line_color="red", line_dash="dashed", line_width=0.5, legend_label="External Input (x)")
 plot.line('x', 'y', source=src_dW, line_width=0.5, legend_label="Noise (dW)")
 plot.line('x', 'y', source=src_initCond, line_color="orange", line_alpha=0.5, line_width=0.5, legend_label="Initial Condition")

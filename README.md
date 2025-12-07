@@ -26,5 +26,11 @@ git clone https://github.com/epochlab/RING
 pip install -r requirements.txt
 ```
 
+## Launch
+```
+bokeh serve --show run_interactive.py
+```
+
+
 ## Requirements
 - All operating systems are supported. Linux is recommended for performance and compatibility reasons.
