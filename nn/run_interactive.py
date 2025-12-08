@@ -8,12 +8,20 @@ from bokeh.plotting import figure, curdoc
 from bokeh.models import ColumnDataSource, Slider, Button, Spacer, Select
 from bokeh.layouts import column, row
 
+import ops
 from model import NN
 
 np.set_printoptions(linewidth=np.inf, suppress=True, precision=6)
 
 def update():
-    net.step(q.value, u.value, c.value, v.value, delta.value, sigma.value, n_opt.value, theta.value, offset.value, shape.value)
+    net.q = q.value
+    net.u = u.value
+    net.c = c.value
+
+    mu0 = [v.value] + [v.value * delta.value] * (n_opt.value-1)             # Value array
+    net.X, _ = ops.create_N_targets(N, mu0, shape.value, sigma=sigma.value, theta=theta.value, offset=offset.value, bypass=False)
+
+    net.dynamics()
 
     src_z.data["y"] = net.z
     src_X.data["y"] = net.X
