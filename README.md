@@ -26,6 +26,7 @@ pip install -r requirements.txt
 
 ## Launch
 ```
+cd nn
 bokeh serve --show run_interactive.py
 ```
 
